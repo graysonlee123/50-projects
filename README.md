@@ -12,3 +12,4 @@ I will add my own twist to many of the projects to keep things interesting.
 6. ♥ [Double Click to Like](https://graysonlee123.github.io/50-projects/dblclick-heart)
 7. 🔑 [Password Generator](https://graysonlee123.github.io/50-projects/password-generator)
 8. 💥 [Toggle Buttons](https://graysonlee123.github.io/50-projects/toggle-buttons)
+9. 💥 [Hover Board](https://graysonlee123.github.io/50-projects/hover-board)

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+.container {
+  display: grid;
+  grid-gap: 2px;
+  max-width: 400px;
+}
+
+.square {
+  background-color: #1d1d1d;
+  box-shadow: 0 0 2px #000;
+  width: 1rem;
+  height: 1rem;
+  transition: background-color 2000ms ease, box-shadow 3000ms ease-in-out;
+}
+
+.square:hover {
+  transition-duration: 0s;
+}
