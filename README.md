@@ -10,3 +10,4 @@ I will add my own twist to many of the projects to keep things interesting.
 4. ✊ [Drag and Dropper](https://graysonlee123.github.io/50-projects/drag-drop)
 5. 📃 [Animated Navbar](https://graysonlee123.github.io/50-projects/navbar)
 6. ♥ [Double Click to Like](https://graysonlee123.github.io/50-projects/dblclick-heart)
+7. 🔑 [Password Generator](https://graysonlee123.github.io/50-projects/password-generator)

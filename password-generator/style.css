@@ -14,6 +14,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 h2 {
@@ -26,10 +29,12 @@ h2 {
   padding: 2rem 1rem;
   width: 350px;
   max-width: 100%;
+  margin: 0 1rem;
 }
 
 .result-container {
-  background-color: darkgray;
+  background-color: #eceeff;
+  color: #727597;
   display: flex;
   justify-content: flex-start;
   align-items: center;

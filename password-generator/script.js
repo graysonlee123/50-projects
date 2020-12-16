@@ -5,7 +5,6 @@ const resultEl = document.getElementById('result'),
   numbersEl = document.getElementById('numbers'),
   symbolsEl = document.getElementById('symbols'),
   generateEl = document.getElementById('generate'),
-  clipboardEl = document.getElementById('clipboard'),
   randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
@@ -13,57 +12,52 @@ const resultEl = document.getElementById('result'),
     symbol: getRandomSymbol,
   }
 
+const inputs = [lengthEl, uppercaseEl, lowercaseEl, numbersEl, symbolsEl]
+
+for (input of inputs) {
+  input.addEventListener('change', function (e) {
+    const { values, length } = getInputValues()
+    resultEl.innerText = generatePassword(values, length)
+  })
+}
+
 generateEl.addEventListener('click', () => {
+  const { values, length } = getInputValues()
+  resultEl.innerText = generatePassword(values, length)
+})
+
+function generatePassword(options, length) {
+  const types = options.filter((obj) => {
+    return obj.active ? obj : false
+  })
+
+  let generatedPassword = ''
+
+  for (let i = 0; i < length; i++) {
+    const picked = types[Math.floor(Math.random() * types.length)].type
+
+    generatedPassword += randomFunc[picked]()
+  }
+
+  return generatedPassword
+}
+
+function getInputValues() {
   const length = parseInt(lengthEl.value),
     hasLower = lowercaseEl.checked,
     hasUpper = uppercaseEl.checked,
     hasNumber = numbersEl.checked,
     hasSymbols = symbolsEl.checked
 
-  resultEl.innerText = generatePassword({
-    hasLower,
-    hasUpper,
-    hasNumber,
-    hasSymbols,
+  return {
+    values: [
+      { type: 'lower', active: hasLower },
+      { type: 'upper', active: hasUpper },
+      { type: 'number', active: hasNumber },
+      { type: 'symbol', active: hasSymbols },
+    ],
     length,
-  })
-})
-
-function generatePassword({
-  hasLower: lower,
-  hasUpper: upper,
-  hasNumber: number,
-  hasSymbols: symbol,
-  length,
-}) {
-  let generatedPassword = ''
-
-  const typesCount = lower + upper + number + symbol,
-    typesArr = [
-      {
-        lower,
-      },
-      {
-        upper,
-      },
-      {
-        number,
-      },
-      {
-        symbol,
-      },
-    ].filter((item) => Object.values(item)[0])
-
-  if (typesCount === 0) return ''
-
-  for (let i = 0; i < length; i += typesCount) {
-    typesArr.forEach((type) => {
-      const funcName = Object.keys(type)[0]
-      generatedPassword += randomFunc[funcName]()
-    })
   }
-
-  return generatedPassword.slice(0, length)
 }
 
 function getRandomLower() {
@@ -108,6 +102,10 @@ function getRandomSymbol() {
 
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
+
+// Copy to Clipboard
+
+const clipboardEl = document.getElementById('clipboard')
 
 clipboardEl.addEventListener('click', function (e) {
   const textarea = document.createElement('textarea'),
