@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 3rem;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #ffb757;
+  color: #321e54;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+small {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.fa-heart {
+  color: #be4c65;
+}
+
+.dblclick-to-like {
+  height: 400px;
+  width: 320px;
+  background-color: #eee;
+  background-image: url(https://source.unsplash.com/random/462x320);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.dblclick-to-like .fa-heart {
+  position: absolute;
+  animation: grow;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
