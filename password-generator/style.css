@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans JP', Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: #eceeff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+}
+
+.container {
+  background-color: #727597;
+  box-shadow: 0 2px 10px rgba(25, 25, 25, 0.2);
+  padding: 2rem 1rem;
+  width: 350px;
+  max-width: 100%;
+}
+
+.result-container {
+  background-color: darkgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 0.75rem 0.5rem;
+  height: 50px;
+  width: 100%;
+}
+
+.result-container .btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1.25rem;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.btn {
+  border: none;
+  background: none;
+  background-color: #5ec277;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.btn-large {
+  width: 100%;
+  display: block;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.setting input[type='number'] {
+  padding: 0.25rem;
+}
