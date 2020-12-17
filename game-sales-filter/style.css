@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: #c5c5df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+
+.title {
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  opacity: 0.8;
+}
+
+header {
+  background-color: #4e5977;
+  color: #fff;
+  padding: 2rem 1.25rem;
+}
+
+header input {
+  background-color: #343b4e;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: #fff;
+  font-family: inherit;
+  width: 100%;
+}
+
+header input:focus {
+  outline: none;
+}
+
+/* List Items */
+
+.game-list {
+  background-color: #fff;
+  list-style-type: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.game-list li {
+  padding: 1.25rem;
+}
+
+.game-list li.hide {
+  display: none;
+}
+
+.game-list li a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}
+
+.game-list li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.game-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  vertical-align: bottom;
+}
+
+.game-list .game-title {
+  margin-bottom: 0.5rem;
+}
+
+.game-list .game-pricing {
+  font-size: 0.8rem;
+}
+
+.game-list .game-pricing .strikethrough {
+  text-decoration: line-through;
+}
+
+.game-list .game-pricing .sale-price {
+  color: #22d354;
+  font-weight: bold;
+}
