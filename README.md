@@ -14,3 +14,4 @@ I will add my own twist to many of the projects to keep things interesting.
 8. 💥 [Toggle Buttons](https://graysonlee123.github.io/50-projects/toggle-buttons)
 9. 👇 [Hover Board](https://graysonlee123.github.io/50-projects/hover-board)
 10. 🕹 [Game Sales Filter](https://graysonlee123.github.io/50-projects/game-sales-filter)
+11. 🔎 [Search Button](https://graysonlee123.github.io/50-projects/search-button)
