@@ -103,6 +103,18 @@ function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
+function checkmark() {
+  const icon = document.getElementById('icon')
+
+  icon.classList.remove('fa-clipboard')
+  icon.classList.add('fa-check')
+
+  setTimeout(() => {
+    icon.classList.remove('fa-check')
+    icon.classList.add('fa-clipboard')
+  }, 400)
+}
+
 // Copy to Clipboard
 
 const clipboardEl = document.getElementById('clipboard')
@@ -120,5 +132,10 @@ clipboardEl.addEventListener('click', function (e) {
   document.execCommand('copy')
   textarea.remove()
 
-  alert('Password copied to clipboard')
+  checkmark()
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  const { values, length } = getInputValues()
+  resultEl.innerText = generatePassword(values, length)
 })
